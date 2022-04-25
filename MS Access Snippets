@@ -1,0 +1,8 @@
+# populate a listbox with SQL query
+
+Private Sub CompanyName_Combo_AfterUpdate()
+    [B]Me.Results_listbox.RowSourceType = "Table/Query"[/B]
+    Me.Results_listbox.RowSource = "SELECT CompanyDetails.Address1, CompanyDetails.Address2, CompanyDetails.Address3, CompanyDetails.Address4 " & _
+                                   "FROM [CompanyDetails] WHERE (CompanyDetails.Company) Like '*" & Me.CompanyName_Combo & "*' """
+    Me.Results_listbox.Requery
+End Sub
