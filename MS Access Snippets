@@ -6,3 +6,19 @@ Private Sub CompanyName_Combo_AfterUpdate()
                                    "FROM [CompanyDetails] WHERE (CompanyDetails.Company) Like '*" & Me.CompanyName_Combo & "*' """
     Me.Results_listbox.Requery
 End Sub
+
+# create temporary query
+Dim q as QueryDef    
+Set q = New QueryDef
+strSQL = 'string'
+q.SQL = strSQL
+q.Name = "TEST_SQL"
+CurrentDb.QueryDefs.Append q
+CurrentDb.QueryDefs.Refresh
+
+#
+https://www.w3schools.com/asp/ado_connect.asp
+#
+https://www.automateexcel.com/vba/access/databases/
+#
+https://docs.microsoft.com/en-us/office/troubleshoot/access/resolve-reference-issues
