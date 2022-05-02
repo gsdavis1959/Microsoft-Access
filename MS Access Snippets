@@ -22,3 +22,17 @@ https://www.w3schools.com/asp/ado_connect.asp
 https://www.automateexcel.com/vba/access/databases/
 #
 https://docs.microsoft.com/en-us/office/troubleshoot/access/resolve-reference-issues
+
+# check for query and delete
+
+With MyDatabase
+For Each MyQueryDef In CurrentDb.QueryDefs
+ If MyQueryDef.Name = "tmpOutQry" Then
+
+   .QueryDefs.Delete ("tmpOutQry")
+   Exit For
+   End If
+   Next
+
+    Set MyQueryDef = .CreateQueryDef("tmpOutQry", strSQL)
+End With
