@@ -36,3 +36,10 @@ For Each MyQueryDef In CurrentDb.QueryDefs
 
     Set MyQueryDef = .CreateQueryDef("tmpOutQry", strSQL)
 End With
+
+
+
+# trust settings
+https://support.microsoft.com/en-us/office/decide-whether-to-trust-a-database-828ce4e9-1f38-4f4b-89c4-81bb0fcda8a4
+# split database
+https://support.microsoft.com/en-us/office/split-an-access-database-3015ad18-a3a1-4e9c-a7f3-51b1d73498cc
